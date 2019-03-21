@@ -3,42 +3,69 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
 
-<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onearmedbandit.FXMLDocumentController">
+<AnchorPane id="AnchorPane" onMouseClicked="#closeJackpot" prefHeight="595.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onearmedbandit.FXMLDocumentController">
    <children>
-      <AnchorPane layoutX="30.0" layoutY="102.0" prefHeight="400.0" prefWidth="542.0" style="-fx-background-color: WHITE;">
-         <children>
-            <ImageView fx:id="slot1" fitHeight="150.0" fitWidth="150.0" layoutX="27.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/fruits2.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="slot2" fitHeight="150.0" fitWidth="150.0" layoutX="192.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/fruits1.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="slot3" fitHeight="150.0" fitWidth="150.0" layoutX="355.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/fruits0.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="180.0" fitWidth="488.0" layoutX="23.0" layoutY="75.0" onMouseClicked="#pull" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/overlay.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <ImageView fx:id="armup" fitHeight="312.0" fitWidth="74.0" layoutX="565.0" layoutY="14.0" onMouseClicked="#pull" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="613.0" fitWidth="706.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="armup" fitHeight="312.0" fitWidth="74.0" layoutX="668.0" layoutY="14.0" onMouseClicked="#pull" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/arm.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="armdown" disable="true" fitHeight="312.0" fitWidth="72.0" layoutX="562.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" visible="false">
+      <ImageView fx:id="armdown" disable="true" fitHeight="312.0" fitWidth="72.0" layoutX="668.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" visible="false">
          <image>
             <Image url="@images/arm.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="slot1" fitHeight="94.0" fitWidth="94.0" layoutX="197.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/fruits2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="101.0" layoutX="193.0" layoutY="256.0" onMouseClicked="#pull" pickOnBounds="true">
+         <image>
+            <Image url="@images/overlay.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot2" fitHeight="94.0" fitWidth="94.0" layoutX="331.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/fruits1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="101.0" layoutX="327.0" layoutY="256.0" onMouseClicked="#pull" pickOnBounds="true">
+         <image>
+            <Image url="@images/overlay.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3" fitHeight="94.0" fitWidth="94.0" layoutX="464.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/fruits0.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="101.0" layoutX="461.0" layoutY="256.0" onMouseClicked="#pull" pickOnBounds="true">
+         <image>
+            <Image url="@images/overlay.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="38.0" onMouseClicked="#close" preserveRatio="true">
+         <image>
+            <Image url="@images/close.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jackpot" disable="true" fitHeight="318.0" fitWidth="731.0" layoutX="19.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/Jackpot.png" />
+         </image>
+      </ImageView>
+      <Polygon fx:id="button1" fill="#ffffff00" layoutX="119.0" layoutY="533.0" onMouseClicked="#stopColumn" points="-41.0, 18.0, 37.0, 18.0, 67.0, -26.0, -2.0, -26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Polygon fx:id="button2" fill="#f7f7f700" layoutX="212.0" layoutY="533.0" onMouseClicked="#stopColumn" points="-33.0, 18.0, 45.0, 18.0, 67.0, -26.0, -2.0, -26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Polygon fx:id="button3" fill="#ffffff00" layoutX="318.0" layoutY="533.0" onMouseClicked="#stopColumn" points="-41.0, 18.0, 45.0, 18.0, 45.0, -26.0, -22.0, -26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fill="#1f93ff00" layoutX="585.0" layoutY="530.0" onMouseClicked="#benjamin" radiusX="66.0" radiusY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>
